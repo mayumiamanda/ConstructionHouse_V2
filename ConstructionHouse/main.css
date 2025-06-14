@@ -1,0 +1,651 @@
+/*------link scss file with main scss------*/
+/*------create color class------*/
+:root {
+  --light-color:#FFF;
+  --dark-color:#000;
+  --orange-color:#FE6918;
+  --dark-orange:#F33702;
+  --ligh-gray:#555C66;
+  --dark-gray:#292D33;
+  --tittle-light-colour:#F1F1F1;
+}
+
+/*------create color class------*/
+/*------create font class------*/
+/*------create font class------*/
+.main-nav-outer {
+  height: 60px;
+  background-color: var(--light-color);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  position: relative;
+  z-index: 1000;
+}
+.main-nav-outer .nav-context {
+  flex: 1;
+}
+.main-nav-outer .nav-context img {
+  height: 45px;
+}
+.main-nav-outer .nav-right ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  list-style: none;
+}
+.main-nav-outer .nav-right ul li {
+  margin-left: 20px;
+  font-size: 18px;
+  cursor: pointer;
+}
+.main-nav-outer .nav-right ul li i {
+  color: var(--dark-gray);
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+.main-nav-outer .nav-right ul li i:hover {
+  color: var(--orange-color);
+  transform: scale(1.1);
+}
+.main-nav-outer .nav-right .menu-toggle {
+  display: block;
+}
+
+.nav-menu {
+  position: absolute;
+  top: 60px;
+  right: 20px;
+  width: 220px;
+  background-color: var(--light-color);
+  border-radius: 8px;
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  transform: translateY(-10px);
+  pointer-events: none;
+  transition: all 0.4s ease;
+  z-index: 999;
+}
+.nav-menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 10px 0;
+}
+.nav-menu ul li {
+  padding: 12px 20px;
+}
+.nav-menu ul li a {
+  text-decoration: none;
+  color: var(--dark-color);
+  font-weight: 500;
+  display: block;
+  transition: all 0.3s ease;
+}
+.nav-menu ul li a:hover {
+  color: var(--orange-color);
+  transform: translateX(5px);
+}
+.nav-menu.active {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.nav-menu {
+  display: none;
+  background-color: var(--light-color);
+  position: absolute;
+  top: 50px;
+  right: 10px;
+  width: 200px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+}
+.nav-menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 10px;
+}
+.nav-menu ul li {
+  padding: 10px 0;
+}
+.nav-menu ul li a {
+  text-decoration: none;
+  color: var(--dark-color);
+}
+.nav-menu ul li a:hover {
+  color: var(--orange-color);
+}
+.nav-menu.active {
+  display: block;
+}
+
+.main-slider-outer {
+  width: 100%;
+  height: 70vh;
+  background-image: url("https://img.freepik.com/free-photo/front-view-female-builder-uniform-gray-wall_140725-151653.jpg?w=996&t=st=1704625451~exp=1704626051~hmac=65382327124246d585ed240dc2665ad6333888f9c7e191dabfd12e475b64d834");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.main-slider-context {
+  width: 60%;
+  height: 100%;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.main-slider-titel-text {
+  color: var(--orange-color);
+  font-size: 55px;
+}
+
+.main-slider-desc-text {
+  font-size: 16px;
+}
+
+.subscribe-data-outer {
+  width: 380px;
+  height: 45px;
+  display: flex;
+}
+.subscribe-data-outer input {
+  flex: 1;
+  padding: 0 8px;
+  border: none;
+}
+.subscribe-data-outer button {
+  width: 100px;
+  background-color: var(--orange-color);
+  color: var(--light-color);
+  border: none;
+  text-transform: uppercase;
+}
+.subscribe-data-outer input:focus {
+  outline: none;
+}
+
+#service {
+  margin-top: 50px;
+}
+
+.service-box {
+  height: 350px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  color: var(--light-color);
+}
+
+.next-page {
+  font-size: 50px;
+  display: flex;
+  justify-content: center;
+  padding-top: 5px;
+}
+
+.service-box:first-child {
+  background-color: var(--orange-color);
+}
+
+.service-box:nth-child(2) {
+  background-color: var(--dark-orange);
+}
+
+.service-box:nth-child(3) {
+  background-color: var(--ligh-gray);
+}
+
+.service-box:last-child {
+  background-color: var(--dark-gray);
+}
+
+.little-about-main-outer {
+  background-color: var(--tittle-light-colour);
+  min-height: 400px;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.little-about-main-outer .container {
+  display: flex;
+  flex-direction: column;
+  align-items: inherit;
+  justify-content: inherit;
+}
+.little-about-main-outer .container h1 {
+  color: var(--orange-color);
+  font-weight: 500;
+  font-size: 45px;
+  text-align: center;
+}
+.little-about-main-outer .container p {
+  font-size: 15px;
+  text-align: center;
+}
+.little-about-main-outer .container button {
+  /*background-color: var(--orange-color);*/
+  color: white;
+  padding: 8px 20px;
+  border: none;
+  background: rgb(254, 105, 24);
+  background: linear-gradient(90deg, rgb(254, 105, 24) 0%, rgb(246, 66, 7) 63%, rgb(254, 105, 24) 76%, rgb(254, 105, 24) 100%);
+}
+
+.main-about-outer {
+  width: 100%;
+  height: auto;
+  min-height: 300px;
+  padding: 20px 0;
+  background-color: var(--orange-color);
+  display: flex;
+  justify-content: center;
+}
+
+.about-inner-text {
+  background-color: var(--light-color);
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding-right: 10px;
+}
+.about-inner-text h1 {
+  color: var(--orange-color);
+}
+.about-inner-text a {
+  padding-top: 20px;
+}
+.about-inner-text a U {
+  color: var(--orange-color);
+}
+
+.main-about-inner {
+  width: 80vw;
+  height: 100%;
+}
+
+.row {
+  margin: 0;
+}
+
+.about-inner {
+  height: 500px;
+  margin: 0;
+  padding: 0;
+}
+
+.img {
+  width: 100%;
+  height: 100%;
+}
+
+#below-area-outer {
+  margin-bottom: 100px;
+  display: flex;
+  justify-content: center;
+}
+
+.row-wrp {
+  justify-content: center;
+}
+
+.below-box {
+  height: 400px;
+  width: auto;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  color: var(--tittle-light-colour);
+}
+.below-box h1 {
+  color: var(--dark-color);
+  font-size: 20px;
+}
+.below-box h5 {
+  color: var(--orange-color);
+  font-weight: 500;
+  font-size: 45px;
+}
+.below-box p {
+  color: var(--dark-gray);
+  font-size: 15px;
+}
+.below-box button {
+  /*background-color: var(--orange-color);*/
+  width: 200px;
+  color: white;
+  padding: 8px 15px;
+  border: none;
+  background: rgb(254, 105, 24);
+  background: linear-gradient(90deg, rgb(254, 105, 24) 0%, rgb(246, 66, 7) 63%, rgb(254, 105, 24) 76%, rgb(254, 105, 24) 100%);
+}
+
+.what-we-do-main {
+  width: 100%;
+  height: auto;
+  padding-top: 20px;
+  padding-bottom: 100px;
+}
+
+.bg-outer {
+  height: 450px;
+  background-image: url(https://img.freepik.com/free-photo/construction-site-operations-background_1409-5622.jpg?t=st=1705134125~exp=1705137725~hmac=d0e17f161331333f69cb6f5a05d989b3f80539e8ee9e0ea13107affea3c67d05&w=1060);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.what-we-do-element-context {
+  width: 100%;
+  height: 400px;
+  margin-top: -200px;
+}
+
+.what-we-do-inner {
+  height: 400px;
+  background-color: var(--light-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 3px solid orangered;
+  text-align: center;
+}
+.what-we-do-inner h4, .what-we-do-inner h5 {
+  padding-top: 20px;
+}
+
+.img-inner {
+  font-size: 70px;
+  height: 150px;
+  width: 150px;
+  background-color: var(--dark-orange);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100%;
+}
+
+.below-about-outer {
+  width: 100%;
+  height: auto;
+  min-height: 300px;
+  padding: 20px 0;
+  background-image: url(https://img.freepik.com/free-photo/construction-workers-hardhats-plan-skyscraper-using-blueprint-teamwork-generated-by-ai_24640-99855.jpg?t=st=1707212895~exp=1707216495~hmac=eec5e5fc977576003e808fd9ccaf8dca8e630bd96ddd1be6b785ea37b9c13c12&w=1060);
+  display: flex;
+  justify-content: center;
+}
+
+.below-about-inner {
+  width: 80vw;
+  height: 100%;
+  background-color: var(--light-color);
+}
+
+.get-in-touch {
+  height: 200px;
+  width: auto;
+  text-align: center;
+  margin-top: 20px;
+}
+.get-in-touch h1 {
+  color: var(--orange-color);
+}
+.get-in-touch h4, .get-in-touch p {
+  padding-top: 20px;
+}
+
+#summery {
+  margin-top: 50px;
+}
+
+.below-inner {
+  height: 500px;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.below-inner h5 {
+  padding-bottom: 15px;
+}
+
+.side1-img {
+  font-size: 20px;
+  height: 50px;
+  width: 50px;
+  margin-top: 10px;
+  background-color: var(--dark-orange);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100%;
+}
+
+.summer-add-data, textarea {
+  width: 500px;
+  height: 60px;
+  display: flex;
+  padding-bottom: 20px;
+}
+.summer-add-data input, textarea input {
+  flex: 1;
+  padding: 0 8px;
+}
+.summer-add-data input:focus, textarea input:focus {
+  outline: none;
+}
+
+.side2 button {
+  width: 300px;
+  height: 50px;
+  margin-top: 20px;
+  background: rgb(254, 105, 24);
+  background: linear-gradient(90deg, rgb(254, 105, 24) 0%, rgb(246, 66, 7) 63%, rgb(254, 105, 24) 76%, rgb(254, 105, 24) 100%);
+  color: var(--light-color);
+  border: none;
+  text-transform: uppercase;
+  padding: auto;
+}
+
+.end-point {
+  width: auto;
+  height: 50px;
+  background-color: #99A4B5;
+  color: var(--light-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.end-point h1 {
+  font-size: 15px;
+}
+
+/* Responsive SCSS Enhancements */
+@media (max-width: 1024px) {
+  .below-about-outer {
+    padding: 10px 0;
+    background-size: cover;
+    background-position: center;
+  }
+  .below-about-outer .below-about-inner {
+    width: 95vw;
+    padding: 15px;
+  }
+  .below-about-outer .get-in-touch {
+    height: auto;
+    padding: 10px;
+  }
+  .below-about-outer .get-in-touch h1 {
+    font-size: 20px;
+  }
+  .below-about-outer .get-in-touch h4 {
+    font-size: 16px;
+  }
+  .below-about-outer .get-in-touch p {
+    font-size: 14px;
+  }
+  .below-about-outer #summery {
+    margin-top: 30px;
+  }
+  .below-about-outer #summery .below-inner {
+    height: auto;
+    padding: 10px;
+  }
+  .below-about-outer #summery .below-inner h5 {
+    font-size: 14px;
+  }
+  .below-about-outer #summery .summer-add-data,
+  .below-about-outer #summery textarea {
+    width: 100%;
+    height: auto;
+  }
+  .below-about-outer #summery .summer-add-data input,
+  .below-about-outer #summery textarea input {
+    height: 40px;
+  }
+  .below-about-outer #summery .summer-add-data textarea,
+  .below-about-outer #summery textarea textarea {
+    height: 100px;
+  }
+  .below-about-outer #summery .side2 button {
+    width: 100%;
+    height: 45px;
+    font-size: 14px;
+  }
+  .below-about-outer #summery .side1-img {
+    height: 40px;
+    width: 40px;
+    font-size: 16px;
+  }
+}
+/* Large devices (desktops, 992px and down) */
+@media (max-width: 992px) {
+  .main-about-inner {
+    width: 95vw;
+  }
+}
+/* Medium devices (tablets, 768px and down) */
+@media (max-width: 768px) {
+  .main-nav-outer {
+    padding: 0 15px;
+  }
+  .main-nav-outer .nav-right ul li {
+    font-size: 16px;
+    margin-left: 15px;
+  }
+  .main-nav-outer .nav-menu {
+    right: 10px;
+    width: 200px;
+  }
+  .main-slider-context {
+    width: 90%;
+  }
+  .main-about-inner {
+    width: 90vw;
+  }
+  .subscribe-data-outer {
+    width: 100%;
+  }
+  .service-box {
+    width: 50%;
+    float: left;
+  }
+  .below-box button {
+    width: auto;
+  }
+  .below-about-outer {
+    margin-top: 374px;
+  }
+}
+/* Small devices (phones, 576px and down) */
+@media (max-width: 576px) {
+  .main-nav-outer {
+    height: auto;
+    padding: 10px;
+  }
+  .main-nav-outer .nav-context img {
+    height: 40px;
+  }
+  .main-slider-context {
+    width: 100%;
+    padding: 0 10px;
+  }
+  .main-slider-context .main-slider-titel-text {
+    font-size: 24px;
+  }
+  .main-slider-context .main-slider-desc-text {
+    font-size: 14px;
+  }
+  .main-slider-context .subscribe-data-outer {
+    width: 100%;
+    flex-direction: column;
+  }
+  .main-slider-context .subscribe-data-outer input, .main-slider-context .subscribe-data-outer button {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  .service-box {
+    width: 100%;
+    height: auto;
+    padding: 20px;
+    text-align: center;
+  }
+  .little-about-main-outer .container {
+    padding: 0 15px;
+  }
+  .little-about-main-outer .container h1 {
+    font-size: 24px;
+  }
+  .little-about-main-outer .container p {
+    font-size: 14px;
+  }
+  .main-about-inner {
+    width: 100%;
+  }
+  .about-inner {
+    height: auto;
+  }
+  .below-box {
+    width: 100%;
+    height: auto;
+    padding: 20px;
+  }
+  .below-box h5 {
+    font-size: 28px;
+  }
+  .what-we-do-element-context {
+    height: auto;
+    margin-top: 0;
+  }
+  .what-we-do-inner {
+    height: auto;
+    padding: 20px;
+  }
+  .below-inner {
+    height: auto;
+    padding: 10px;
+  }
+  .summer-add-data,
+  textarea {
+    width: 100%;
+  }
+  .side2 button {
+    width: 100%;
+  }
+  .below-about-outer {
+    margin-top: 25px;
+  }
+  .below-about-outer .summery-row-wrp {
+    display: block;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */
